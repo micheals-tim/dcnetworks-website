@@ -1,0 +1,367 @@
+<%#
+#==============================================================================
+# FILE: app/views/pages/home.html.erb
+# DESC: This is the final, clean version of your home page. It contains no
+#       inline styles or head tags, relying entirely on the asset pipeline.
+#       The footer has been updated to correctly display the member logos.
+#==============================================================================
+%>
+
+<!-- Header -->
+<header id="main-header" class="bg-white sticky top-0 z-50 py-4">
+  <div class="container mx-auto px-6 flex justify-between items-center">
+    <a href="/" class="flex-shrink-0">
+      <%= image_tag 'dcn_logo.png', id: 'logo', alt: 'DC Networks Logo', class: 'h-16 w-auto' %>
+    </a>
+    <nav class="hidden md:flex items-center space-x-6 lg:space-x-8">
+      <a href="#services" class="text-gray-600 hover:text-blue-600 transition duration-300">Core Services</a>
+      <a href="#specialized-services" class="text-gray-600 hover:text-blue-600 transition duration-300">Specialized Services</a>
+      <a href="#why-us" class="text-gray-600 hover:text-blue-600 transition duration-300">Why Us</a>
+      <a href="#testimonials" class="text-gray-600 hover:text-blue-600 transition duration-300">Testimonials</a>
+      <a href="#contact" class="text-gray-600 hover:text-blue-600 transition duration-300">Contact</a>
+    </nav>
+    <div class="hidden md:flex items-center space-x-4">
+      <a href="#" class="text-gray-600 font-semibold hover:text-blue-600 transition duration-300">
+          Login
+      </a>
+      <a href="#contact" class="bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+        Get a Free Consultation
+      </a>
+    </div>
+    <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+      <a href="#services" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">Core Services</a>
+      <a href="#specialized-services" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">Specialized Services</a>
+      <a href="#why-us" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">Why Us</a>
+      <a href="#testimonials" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">Testimonials</a>
+      <a href="#contact" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">Contact</a>
+      <div class="p-4 border-t mt-2 space-y-3">
+          <a href="#" class="w-full text-center block bg-gray-200 text-gray-800 font-semibold px-5 py-2 rounded-lg hover:bg-gray-300 transition duration-300">
+              Login
+          </a>
+          <a href="#contact" class="w-full text-center block bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+              Get a Free Consultation
+          </a>
+      </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main>
+  <!-- Hero Section -->
+  <section class="relative text-white">
+    <!-- Slideshow Container -->
+    <div class="hero-slider absolute top-0 left-0 w-full h-full">
+      <div class="slide active" style="background-image: url('<%= image_path('unsplash/meeting.jpg') %>');"></div>
+      <div class="slide" style="background-image: url('<%= image_path('unsplash/helpdesk.jpg') %>');"></div>
+      <div class="slide" style="background-image: url('<%= image_path('unsplash/datacenter.jpg') %>');"></div>
+      <div class="slide" style="background-image: url('<%= image_path('unsplash/chicago_night_sky.jpg') %>');"></div>
+    </div>
+    
+    <div class="absolute top-0 left-0 w-full h-full bg-gray-900 bg-opacity-70"></div>
+    
+    <div class="relative container mx-auto px-6 py-24 md:py-40 text-center z-10">
+      <h2 class="text-4xl md:text-6xl font-bold leading-tight drop-shadow-lg">Reliable IT Services for Your Business</h2>
+      <p class="mt-6 text-lg md:text-xl text-gray-200 max-w-3xl mx-auto drop-shadow-md">
+        Stop worrying about technology. DC Networks provides proactive managed IT services, so you can focus on growing your business.
+      </p>
+      <div class="mt-10">
+        <a href="#contact" class="bg-blue-600 text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-blue-700 transition-transform duration-300 inline-block transform hover:scale-105 shadow-xl">
+          Request Your Free Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Services Section -->
+  <section id="services" class="py-20">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h3 class="text-4xl font-bold text-gray-900">Our Core Services</h3>
+        <p class="mt-4 text-lg text-gray-600">Comprehensive IT solutions tailored for your business needs.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+          <div class="bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 16v-2m0-10v2M6 12H4m16 0h-2m-10 0h2m-2-7l2 2m10 10l2 2m-12-2l-2 2m12 0l2-2M9 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          </div>
+          <h4 class="text-2xl font-bold mb-3">Managed IT Services</h4>
+          <p class="text-gray-600">Proactive monitoring, maintenance, and support for your entire IT infrastructure, 24/7.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+          <div class="bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+          </div>
+          <h4 class="text-2xl font-bold mb-3">Network Security</h4>
+          <p class="text-gray-600">Protect your business from cyber threats with our advanced security solutions and expertise.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+          <div class="bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
+          </div>
+          <h4 class="text-2xl font-bold mb-3">Cloud Solutions</h4>
+          <p class="text-gray-600">Leverage the power of the cloud for enhanced flexibility, scalability, and collaboration.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+          <div class="bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7"></path></svg>
+          </div>
+          <h4 class="text-2xl font-bold mb-3">Data Backup & Recovery</h4>
+          <p class="text-gray-600">Ensure your critical business data is always safe, secure, and recoverable.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Specialized Services Section -->
+    <section id="specialized-services" class="pb-20">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h3 class="text-3xl font-bold text-gray-900">Specialized & Add-On Services</h3>
+          <p class="mt-4 text-lg text-gray-600">For when your projects require more than just management.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <div class="bg-green-100 text-green-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                </div>
+                <h4 class="text-2xl font-bold mb-3">Application Development</h4>
+                <p class="text-gray-600">Custom software solutions built to solve your unique business challenges and streamline workflows.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <div class="bg-green-100 text-green-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                </div>
+                <h4 class="text-2xl font-bold mb-3">Infrastructure Design</h4>
+                <p class="text-gray-600">Expert planning and design of robust, scalable, and secure IT infrastructure from the ground up.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                <div class="bg-green-100 text-green-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h4 class="text-2xl font-bold mb-3">Project Implementation</h4>
+                <p class="text-gray-600">Seamless execution and management of complex IT projects, ensuring on-time and on-budget delivery.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-gray-900">Your Strategic IT Partner</h3>
+                <p class="mt-4 text-lg text-gray-600">We're more than just an IT provider; we're invested in your success.</p>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <%= image_tag 'computer-network-architects.jpg', alt: 'DC Networks Team of expert network architects', class: 'rounded-lg shadow-xl' %>
+                </div>
+                <div class="md:w-1/2">
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-8 w-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-xl font-semibold">Proactive Support</h4>
+                                <p class="text-gray-600 mt-1">We identify and fix issues before they become problems, minimizing downtime and saving you money.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                             <div class="flex-shrink-0 h-8 w-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-xl font-semibold">Predictable Costs</h4>
+                                <p class="text-gray-600 mt-1">Our flat-rate monthly fee makes budgeting for IT simple and predictable, with no surprise bills.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                             <div class="flex-shrink-0 h-8 w-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-xl font-semibold">Dedicated Experts</h4>
+                                <p class="text-gray-600 mt-1">Gain access to a team of experienced IT professionals dedicated to helping your business succeed.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h3 class="text-4xl font-bold text-gray-900">What Our Clients Say</h3>
+          <p class="mt-4 text-lg text-gray-600">We're proud to have earned the trust of businesses across the area.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <p class="text-gray-600 italic">"DC Networks transformed our IT from a constant headache into a reliable asset. Their proactive approach is a game-changer."</p>
+            <div class="mt-4 flex items-center">
+              <img class="w-12 h-12 rounded-full" src="https://placehold.co/100x100/EBF4FF/7F9CF5?text=A" alt="Avatar">
+              <div class="ml-4">
+                <p class="font-semibold text-gray-900">Jane Doe</p>
+                <p class="text-gray-500">CEO, Local Business</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <p class="text-gray-600 italic">"The team is incredibly responsive and knowledgeable. We finally have an IT partner we can truly rely on, 24/7."</p>
+            <div class="mt-4 flex items-center">
+              <img class="w-12 h-12 rounded-full" src="https://placehold.co/100x100/EBF4FF/7F9CF5?text=B" alt="Avatar">
+              <div class="ml-4">
+                <p class="font-semibold text-gray-900">John Smith</p>
+                <p class="text-gray-500">Operations Manager, Mfg Corp</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <p class="text-gray-600 italic">"Our transition to the cloud was seamless thanks to DC Networks. They handled everything with professionalism and expertise."</p>
+            <div class="mt-4 flex items-center">
+              <img class="w-12 h-12 rounded-full" src="https://placehold.co/100x100/EBF4FF/7F9CF5?text=C" alt="Avatar">
+              <div class="ml-4">
+                <p class="font-semibold text-gray-900">Emily White</p>
+                <p class="text-gray-500">Owner, Creative Agency</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="bg-gray-50 rounded-xl shadow-2xl overflow-hidden lg:grid lg:grid-cols-2 lg:gap-4">
+          <div class="p-8 md:p-12 lg:p-16">
+            <h3 class="text-3xl font-bold text-gray-900">Ready to Upgrade Your IT?</h3>
+            <p class="mt-4 text-lg text-gray-600">
+              Let's talk about how DC Networks can help your business. Fill out the form for a free, no-obligation consultation.
+            </p>
+            <form action="#" method="POST" class="mt-8 space-y-6">
+              <div>
+                <label for="name" class="sr-only">Full Name</label>
+                <input type="text" name="name" id="name" autocomplete="name" required class="block w-full px-4 py-3 rounded-md bg-white border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Full Name">
+              </div>
+              <div>
+                <label for="email" class="sr-only">Email Address</label>
+                <input type="email" name="email" id="email" autocomplete="email" required class="block w-full px-4 py-3 rounded-md bg-white border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Email Address">
+              </div>
+               <div>
+                <label for="phone" class="sr-only">Phone Number</label>
+                <input type="tel" name="phone" id="phone" autocomplete="tel" class="block w-full px-4 py-3 rounded-md bg-white border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Phone Number (Optional)">
+              </div>
+              <div>
+                <label for="message" class="sr-only">Message</label>
+                <textarea id="message" name="message" rows="4" required class="block w-full px-4 py-3 rounded-md bg-white border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="How can we help?"></textarea>
+              </div>
+              <div>
+                <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="hidden lg:block">
+             <img class="h-full w-full object-cover" src="<%= image_path('unsplash/contact_us.jpg') %>" alt="Modern office network">
+          </div>
+        </div>
+      </div>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-gray-300">
+  <div class="container mx-auto px-6 pt-16 pb-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+      <div class="lg:col-span-1">
+        <h4 class="text-lg font-semibold text-white tracking-wider uppercase mb-4">Contact Info</h4>
+        <div class="space-y-3">
+          <p><strong class="font-semibold text-white">Phone:</strong> 630-931-8100</p>
+          <p><strong class="font-semibold text-white">Helpdesk Hours:</strong> 24 x 7 x 365</p>
+          <div>
+            <p><strong class="font-semibold text-white">Office Hours:</strong></p>
+            <p>Monday - Friday: 8am to 6pm</p>
+            <p>Saturday - Sunday: By Appointment Only</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="lg:col-span-2">
+        <h4 class="text-lg font-semibold text-white tracking-wider uppercase mb-4">Proud Member Of</h4>
+        <div class="flex flex-col sm:flex-row items-center gap-4 justify-center sm:justify-start">
+          <div class="bg-white p-2 rounded-md transition-transform duration-300 hover:scale-120">
+            <%= image_tag 'ARCC_full_color.png', alt: 'Aurora Regional Chamber of Commerce', class: 'h-20 w-auto' %>
+          </div>
+          <div class="bg-white p-2 rounded-md transition-transform duration-300 hover:scale-120">
+            <%= image_tag 'LGBTCCIL-Logo.jpg', alt: 'LGBT Chamber of Commerce Illinois', class: 'h-20 w-auto' %>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="border-t border-gray-700 pt-6 mt-8 flex flex-col sm:flex-row justify-between items-center  ">
+      <p class="text-sm text-gray-400">&copy; <%= Time.now.year %> Developed by DC Networks, Inc.</p>
+      <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-4 sm:mt-0">
+        <a href="#services" class="text-gray-600 hover:text-blue-600 transition duration-300">Core Services</a>
+        <a href="#specialized-services" class="text-gray-600 hover:text-blue-600 transition duration-300">Specialized Services</a>
+        <a href="#why-us" class="text-gray-600 hover:text-blue-600 transition duration-300">Why Us</a>
+        <a href="#testimonials" class="text-gray-600 hover:text-blue-600 transition duration-300">Testimonials</a>
+        <a href="#contact" class="text-gray-600 hover:text-blue-600 transition duration-300">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Simple script for mobile menu toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Close mobile menu when a link is clicked
+  document.querySelectorAll('#mobile-menu a, nav a').forEach(link => {
+      link.addEventListener('click', () => {
+          if (!mobileMenu.classList.contains('hidden')) {
+              mobileMenu.classList.add('hidden');
+          }
+      });
+  });
+
+  // Hero Slideshow Script
+  document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.hero-slider .slide');
+    let currentSlide = 0;
+    const slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+
+    function nextSlide() {
+      if (slides.length > 0) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+      }
+    }
+  });
+
+  // Shrinking header script
+  window.addEventListener('scroll', function() {
+      const header = document.getElementById('main-header');
+      if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+      } else {
+          header.classList.remove('scrolled');
+      }
+  });
+</script>

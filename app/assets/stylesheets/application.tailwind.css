@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for components */
+body {
+  font-family: 'Inter', sans-serif;
+}
+.hero-slider .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  background-size: cover;
+  background-position: center;
+}
+.hero-slider .slide.active {
+  opacity: 1;
+}
+#main-header {
+  transition: all 0.3s ease-in-out;
+}
+#main-header.scrolled {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+#main-header #logo {
+    transition: height 0.3s ease-in-out;
+}
+#main-header.scrolled #logo {
+    height: 2.5rem; /* 40px */
+}
