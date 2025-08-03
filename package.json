@@ -1,26 +1,22 @@
 {
   "name": "dcnetworks-website",
   "version": "1.0.0",
-  "description": "",
+  "description": "Static website for DCNetworks",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./dist/style.css && copyfiles -u 1 src/*.html src/*.js dist"
+    "build": "tailwindcss -i ./src/input.css -o ./dist/style.css && copyfiles -u 1 src/*.html src/*.js dist && copyfiles -u 1 \"src/assets/**/*\" dist"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/micheals-tim/dcnetworks-website.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "DC Networks, Inc.",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/micheals-tim/dcnetworks-website/issues"
-  },
-  "homepage": "https://github.com/micheals-tim/dcnetworks-website#readme",
   "devDependencies": {
-    "autoprefixer": "^10.4.21",
+    "autoprefixer": "^10.4.19",
     "copyfiles": "^2.4.1",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^3.4.17"
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4"
   }
 }

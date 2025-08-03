@@ -3,90 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DCNetworks | Managed IT Services</title>
+    <title>DCNetworks | Reliable IT Services for Your Business</title>
     <link href="/style.css" rel="stylesheet">
-    <script defer src="/main.js"></script>
+    <script src="/main.js"></script>
 </head>
-<body class="bg-gray-50 font-sans text-gray-800">
+<body class="bg-gray-100">
 
-    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-200">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div>
-                <a href="#" class="text-2xl font-bold text-gray-900">DCNetworks</a>
-            </div>
-            <div class="hidden md:flex space-x-8">
-                <a href="#services" class="text-gray-600 hover:text-blue-600">Services</a>
-                <a href="#about" class="text-gray-600 hover:text-blue-600">About Us</a>
-                <a href="#contact" class="text-gray-600 hover:text-blue-600">Contact</a>
-            </div>
-            <a href="#contact" class="hidden md:block bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
-                Free Consultation
+    <!-- Header -->
+    <header id="main-header" class="bg-white sticky top-0 z-50 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="/" class="flex-shrink-0">
+                <img src="assets/images/dcn_logo.png" id="logo" alt="DC Networks Logo" class="h-16 w-auto">
             </a>
-        </nav>
+            <nav class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                <a href="#services" class="text-gray-600 hover:text-blue-600 transition duration-300">Core Services</a>
+                <a href="#specialized-services" class="text-gray-600 hover:text-blue-600 transition duration-300">Specialized Services</a>
+                <a href="#why-us" class="text-gray-600 hover:text-blue-600 transition duration-300">Why Us</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-blue-600 transition duration-300">Testimonials</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition duration-300">Contact</a>
+            </nav>
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="#" class="text-gray-600 font-semibold hover:text-blue-600 transition duration-300">Login</a>
+                <a href="#contact" class="bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition duration-300">Get a Free Consultation</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <a href="#services" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">Core Services</a>
+            <a href="#specialized-services" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">Specialized Services</a>
+            <a href="#why-us" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">Why Us</a>
+            <a href="#testimonials" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">Testimonials</a>
+            <a href="#contact" class="block px-6 py-3 text-gray-600 hover:bg-gray-100">Contact</a>
+            <div class="p-4 border-t mt-2 space-y-3">
+                <a href="#" class="w-full text-center block bg-gray-200 text-gray-800 font-semibold px-5 py-2 rounded-lg hover:bg-gray-300">Login</a>
+                <a href="#contact" class="w-full text-center block bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700">Get a Free Consultation</a>
+            </div>
+        </div>
     </header>
 
+    <!-- Main Content -->
     <main>
-
-        <section class="bg-gray-900 text-white text-center py-20 md:py-32">
-            <div class="container mx-auto px-6">
-                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Proactive IT for Growing Businesses</h1>
-                <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">Stop worrying about technology. We provide the expertise and support to keep your business running smoothly.</p>
-                <a href="#contact" class="mt-8 inline-block bg-blue-600 text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-blue-700 transition duration-300">
-                    Get a Free Quote
-                </a>
+        <!-- Hero Section -->
+        <section class="relative h-[60vh] text-white">
+            <div class="hero-slider absolute top-0 left-0 w-full h-full">
+                <div class="slide active" style="background-image: url('assets/images/unsplash/meeting.jpg');"></div>
+                <div class="slide" style="background-image: url('assets/images/unsplash/helpdesk.jpg');"></div>
+                <div class="slide" style="background-image: url('assets/images/unsplash/datacenter.jpg');"></div>
+            </div>
+            <div class="absolute top-0 left-0 w-full h-full bg-gray-900 bg-opacity-70"></div>
+            <div class="relative container mx-auto px-6 h-full flex flex-col justify-center items-center text-center z-10">
+                <h2 class="text-4xl md:text-6xl font-bold leading-tight drop-shadow-lg">Reliable IT Services for Your Business</h2>
+                <p class="mt-6 text-lg md:text-xl text-gray-200 max-w-3xl mx-auto drop-shadow-md">Stop worrying about technology. DC Networks provides proactive managed IT services, so you can focus on growing your business.</p>
+                <div class="mt-10">
+                    <a href="#contact" class="bg-blue-600 text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-blue-700 transition-transform duration-300 inline-block transform hover:scale-105 shadow-xl">Request Your Free Quote</a>
+                </div>
             </div>
         </section>
 
+        <!-- Core Services Section -->
         <section id="services" class="py-20">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold mb-2">Our Core Services</h2>
-                <p class="text-gray-600 mb-12">Comprehensive solutions tailored for you.</p>
-                </div>
+             <div class="container mx-auto px-6">
+                 <div class="text-center mb-16">
+                     <h3 class="text-4xl font-bold text-gray-900">Our Core Services</h3>
+                     <p class="mt-4 text-lg text-gray-600">Comprehensive IT solutions tailored for your business needs.</p>
+                 </div>
+                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"><h4 class="text-2xl font-bold mb-3">Managed IT Services</h4><p class="text-gray-600">Proactive monitoring, maintenance, and support for your entire IT infrastructure, 24/7.</p></div>
+                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"><h4 class="text-2xl font-bold mb-3">Network Security</h4><p class="text-gray-600">Protect your business from cyber threats with our advanced security solutions and expertise.</p></div>
+                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"><h4 class="text-2xl font-bold mb-3">Cloud Solutions</h4><p class="text-gray-600">Leverage the power of the cloud for enhanced flexibility, scalability, and collaboration.</p></div>
+                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"><h4 class="text-2xl font-bold mb-3">Data Backup & Recovery</h4><p class="text-gray-600">Ensure your critical business data is always safe, secure, and recoverable.</p></div>
+                 </div>
+             </div>
         </section>
 
-        <section id="about" class="py-20 bg-white">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold mb-2">Your Strategic IT Partner</h2>
-                <p class="text-gray-600 mb-12">We're invested in your success.</p>
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h3 class="text-4xl font-bold text-gray-900">What Our Clients Say</h3>
                 </div>
-        </section>
-
-        <section id="contact" class="py-20">
-            <div class="container mx-auto px-6 max-w-xl">
-                <div class="bg-white p-8 rounded-xl shadow-lg">
-                    <h2 class="text-3xl font-bold text-center mb-2">Ready to Upgrade Your IT?</h2>
-                    <p class="text-gray-600 text-center mb-8">Fill out the form for a free consultation.</p>
-                    
-                    <form id="contact-form" class="space-y-6">
-                        <input type="hidden" name="sheetName" value="DCNetworks Leads">
-                        
-                        <div>
-                            <label for="name" class="sr-only">Full Name</label>
-                            <input type="text" name="name" id="name" required class="block w-full px-4 py-3 rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Full Name">
-                        </div>
-                        <div>
-                            <label for="email" class="sr-only">Email</label>
-                            <input type="email" name="email" id="email" required class="block w-full px-4 py-3 rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Email Address">
-                        </div>
-                        <div>
-                            <label for="message" class="sr-only">Message</label>
-                            <textarea name="message" id="message" rows="4" required class="block w-full px-4 py-3 rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="How can we help?"></textarea>
-                        </div>
-                        <div>
-                            <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-blue-600 hover:bg-blue-700">
-                                Send Message
-                            </button>
-                        </div>
-                    </form>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-8 rounded-xl"><p class="text-gray-600 italic">"DC Networks transformed our IT from a constant headache into a reliable asset. Their proactive approach is a game-changer."</p><div class="mt-4 flex items-center"><img class="w-12 h-12 rounded-full" src="https://placehold.co/100x100/EBF4FF/7F9CF5?text=A" alt="Avatar"><div class="ml-4"><p class="font-semibold text-gray-900">Jane Doe</p><p class="text-gray-500">CEO, Local Business</p></div></div></div>
+                    <div class="bg-gray-50 p-8 rounded-xl"><p class="text-gray-600 italic">"The team is incredibly responsive and knowledgeable. We finally have an IT partner we can truly rely on, 24/7."</p><div class="mt-4 flex items-center"><img class="w-12 h-12 rounded-full" src="https://placehold.co/100x100/EBF4FF/7F9CF5?text=B" alt="Avatar"><div class="ml-4"><p class="font-semibold text-gray-900">John Smith</p><p class="text-gray-500">Operations Manager, Mfg Corp</p></div></div></div>
+                    <div class="bg-gray-50 p-8 rounded-xl"><p class="text-gray-600 italic">"Our transition to the cloud was seamless thanks to DC Networks. They handled everything with professionalism and expertise."</p><div class="mt-4 flex items-center"><img class="w-12 h-12 rounded-full" src="https://placehold.co/100x100/EBF4FF/7F9CF5?text=C" alt="Avatar"><div class="ml-4"><p class="font-semibold text-gray-900">Emily White</p><p class="text-gray-500">Owner, Creative Agency</p></div></div></div>
                 </div>
             </div>
         </section>
 
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden lg:grid lg:grid-cols-2 lg:gap-4">
+                    <div class="p-8 md:p-12 lg:p-16">
+                        <h3 class="text-3xl font-bold text-gray-900">Ready to Upgrade Your IT?</h3>
+                        <p class="mt-4 text-lg text-gray-600">Let's talk. Fill out the form for a free, no-obligation consultation.</p>
+                        <form id="contact-form" class="mt-8 space-y-6">
+                            <input type="hidden" name="sheetName" value="DCNetworks Leads">
+                            <div><input type="text" name="name" id="name" required class="block w-full px-4 py-3 rounded-md border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Full Name"></div>
+                            <div><input type="email" name="email" id="email" required class="block w-full px-4 py-3 rounded-md border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Email Address"></div>
+                            <div><textarea id="message" name="message" rows="4" required class="block w-full px-4 py-3 rounded-md border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="How can we help?"></textarea></div>
+                            <div><button id="submit-button" type="submit" class="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-blue-600 hover:bg-blue-700">Send Message</button></div>
+                        </form>
+                    </div>
+                    <div class="hidden lg:block">
+                        <img class="h-full w-full object-cover" src="assets/images/unsplash/datacenter.jpg" alt="Modern office network">
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="bg-gray-800 text-gray-400 py-12">
-        <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2025 DCNetworks, Inc. All Rights Reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300">
+        <div class="container mx-auto px-6 pt-16 pb-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+                <div class="lg:col-span-1">
+                    <h4 class="text-lg font-semibold text-white tracking-wider uppercase mb-4">Contact Info</h4>
+                    <div class="space-y-3">
+                        <p><strong class="font-semibold text-white">Phone:</strong> 630-931-8100</p>
+                        <p><strong class="font-semibold text-white">Helpdesk Hours:</strong> 24 x 7 x 365</p>
+                    </div>
+                </div>
+                <div class="lg:col-span-2">
+                    <h4 class="text-lg font-semibold text-white tracking-wider uppercase mb-4">Proud Member Of</h4>
+                    <div class="flex items-center gap-4">
+                        <a href="#" class="block bg-white p-2 rounded-md"><img src="assets/images/ARCC_full_color.png" alt="Aurora Regional Chamber of Commerce" class="h-20 w-auto"></a>
+                        <a href="#" class="block bg-white p-2 rounded-md"><img src="assets/images/LGBTCCIL-Logo.jpg" alt="LGBT Chamber of Commerce Illinois" class="h-20 w-auto"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 mt-8 text-center">
+                <p class="text-sm text-gray-400">&copy; 2025 Developed by DC Networks, Inc.</p>
+            </div>
         </div>
     </footer>
 
