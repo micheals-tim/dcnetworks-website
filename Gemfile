@@ -63,5 +63,5 @@ group :test do
 end
 
 gem 'tailwindcss-rails', '~> 2.0'
-gem 'foreman', '~> 0.87.2'
+gem 'foreman', '~> 0.90.0'
 gem 'dotenv-rails', '~> 2.7', groups: [:development, :test]
